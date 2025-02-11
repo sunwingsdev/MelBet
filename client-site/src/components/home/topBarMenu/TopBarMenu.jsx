@@ -11,6 +11,7 @@ import { MdSportsCricket } from "react-icons/md";
 import { RxCaretDown } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import logo from "../../../assets/logo.png";
 
 const links = [
   { name: "App", url: "/app", icon: null },
@@ -34,11 +35,7 @@ const TopBarMenu = () => {
       <div className="flex items-center gap-5 bg-[#212121] pl-4">
         {/* logo */}
         <Link>
-          <img
-            className="w-52 2xl:w-64"
-            src="https://v3.traincdn.com/genfiles/cms/8-62/desktop/media_asset/dd77c8f1b5bd23e38cd81fb7d861af10.svg"
-            alt=""
-          />
+          <img className="w-52 2xl:w-64" src={logo} alt="" />
         </Link>
         <div className="w-full">
           {/* top social menu bar */}
@@ -58,7 +55,7 @@ const TopBarMenu = () => {
               <div className="flex gap-2 items-center">
                 {socialLinks.map((social) => (
                   <Link key={social.id} href={social.url} target="_blank">
-                    <div className="p-1.5 text-black bg-amber-400 hover:bg-amber-300 rounded-full duration-300">
+                    <div className="p-1.5 text-white bg-sky-600 hover:bg-sky-700 rounded-full duration-300">
                       {social.icon}
                     </div>
                   </Link>
@@ -68,7 +65,7 @@ const TopBarMenu = () => {
 
             <div className="flex items-center gap-3">
               <Link>
-                <div className="py-0.5 px-4 text-md text-black bg-amber-400 hover:bg-amber-300 duration-300 rounded-sm">
+                <div className="py-0.5 px-4 text-md text-white bg-sky-600 hover:bg-sky-700 duration-300 rounded-sm">
                   Registration
                 </div>
               </Link>
@@ -80,7 +77,7 @@ const TopBarMenu = () => {
             </div>
           </div>
           {/* bottom menu bar */}
-          <div className="flex gap-2 items-center justify-between pr-4 bg-amber-400">
+          <div className="flex gap-2 items-center justify-between pr-4 text-white bg-sky-600">
             <div className="flex items-center">
               <Link>
                 <div className="flex items-center gap-1 py-3 px-2.5 text-sm font-medium">

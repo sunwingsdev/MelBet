@@ -7,6 +7,10 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import FooterFaq from "../home/footerFaq/FooterFaq";
+import FooterFaqBottom from "../home/footerFaq/FooterFaqBottom";
+import FooterMenu from "../home/footer/FooterMenu";
+import Partners from "../home/footer/Partners";
 
 const Footer = () => {
   // social link
@@ -21,6 +25,11 @@ const Footer = () => {
   return (
     <div>
       <div className="p-3 space-y-3">
+        <FooterFaq />
+        <FooterFaqBottom />
+        <FooterMenu />
+        <Partners />
+
         <p className="p-4 text-sm text-[#c2c2c2] bg-[#212121] rounded-md">
           melbet.com is owned and operated by Pelican Entertainment B.V. as a
           License Holder (Curacao Egaming License No. 8048/JAZ2020-060) with a
