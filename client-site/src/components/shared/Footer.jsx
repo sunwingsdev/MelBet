@@ -11,6 +11,7 @@ import FooterFaq from "../home/footerFaq/FooterFaq";
 import FooterFaqBottom from "../home/footerFaq/FooterFaqBottom";
 import FooterMenu from "../home/footer/FooterMenu";
 import Partners from "../home/footer/Partners";
+import FooterSlider from "../home/footer/FooterSlider";
 
 const Footer = () => {
   // social link
@@ -99,6 +100,8 @@ const Footer = () => {
             </Link>
           </div>
         </div>
+
+        <FooterSlider />
       </div>
     </div>
   );
