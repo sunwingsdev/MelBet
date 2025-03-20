@@ -1,0 +1,45 @@
+@import "tailwindcss";
+/* Hide scrollbar for Chrome, Safari and Opera */
+
+/* -------------font-family-------------------- */
+*{
+  font-family: "Poppins", sans-serif;
+}
+.clip-left-shape {
+  clip-path: polygon(90% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+/* -------------font-family-------------------- */
+/* add the code bellow */ 
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+ /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+}
+}
+@theme {
+  --color-theme-color: #FFB805;
+}
+/* ------------custom-color--------------------- */
+:root{
+  --theme-color:#0284c7;
+  --gray_color:#1a1a1a;
+}
+/* -------------custom-scrollbar--------------------- */
+@layer utilities {
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 2px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: gray; /* Indigo */
+    border-radius: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: #e5e7eb;
+  }
+}
