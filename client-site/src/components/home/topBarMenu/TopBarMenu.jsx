@@ -12,6 +12,7 @@ import { RxCaretDown } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import logo from "../../../assets/logo.png";
+import { FaTimes } from "react-icons/fa";
 
 const links = [
   { name: "App", url: "/app", icon: null },
@@ -65,12 +66,18 @@ const TopBarMenu = () => {
 
             <div className="flex items-center gap-3">
               <Link>
-                <div className="py-0.5 px-4 text-md text-white bg-sky-600 hover:bg-sky-700 duration-300 rounded-sm">
+                <div
+                  onClick={() => setIsOpen(true)}
+                  className="py-0.5 px-4 text-md text-white bg-sky-600 hover:bg-sky-700 duration-300 rounded-sm"
+                >
                   Registration
                 </div>
               </Link>
               <Link>
-                <div className="py-0.5 px-4 text-md text-white bg-[#3b3b3b] hover:bg-[#4d4c4c] rounded-sm">
+                <div
+                  onClick={() => setIsOpen(true)}
+                  className="py-0.5 px-4 text-md text-white bg-[#3b3b3b] hover:bg-[#4d4c4c] rounded-sm"
+                >
                   Login
                 </div>
               </Link>
@@ -121,6 +128,54 @@ const TopBarMenu = () => {
           </div>
         </div>
       </div>
+
+      {/* Modal */}
+      {isOpen && (
+        <div className="fixed inset-0 flex items-center justify-center z-50">
+          {/* Blurred Background */}
+          <div
+            className="fixed inset-0 bg-opacity-50 backdrop-blur-sm"
+            onClick={() => setIsOpen(false)} // Click করলে বন্ধ হবে
+          ></div>
+
+          {/* Modal Content */}
+          <div className="bg-white p-6 rounded-lg shadow-lg z-50 w-96 max-h-[80vh] overflow-y-auto relative no-scrollbar">
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-3 right-3 text-gray-600 hover:text-gray-900"
+            >
+              <FaTimes size={20} />
+            </button>
+            <h2 className="text-lg font-bold mb-4">Login / Registration</h2>
+
+            <p>আপনার তথ্য দিন...</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+              molestias officiis dolorum iste soluta sit tempore est sapiente
+              reiciendis rem, maiores, delectus recusandae impedit magnam
+              cupiditate placeat, repudiandae laborum dicta.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+              molestias officiis dolorum iste soluta sit tempore est sapiente
+              reiciendis rem, maiores, delectus recusandae impedit magnam
+              cupiditate placeat, repudiandae laborum dicta.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+              molestias officiis dolorum iste soluta sit tempore est sapiente
+              reiciendis rem, maiores, delectus recusandae impedit magnam
+              cupiditate placeat, repudiandae laborum dicta.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
+              molestias officiis dolorum iste soluta sit tempore est sapiente
+              reiciendis rem, maiores, delectus recusandae impedit magnam
+              cupiditate placeat, repudiandae laborum dicta.
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
