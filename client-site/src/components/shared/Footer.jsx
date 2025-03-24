@@ -109,6 +109,29 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      <div className="px-96 py-96 space-y-2">
+        {/* single */}
+        <div className="py-1.5 px-4 bg-white rounded-md">
+          <div className="w-full flex items-center justify-between gap-2">
+            <div className="flex items-center gap-5">
+              <span>1</span>
+              <div className="flex items-center gap-1">
+                <img
+                  className="w-10 h-10 rounded-full"
+                  src="https://hgzy.org/assets/png/4-12a0d0c5.png"
+                  alt=""
+                />
+                <p>DS******BY</p>
+              </div>
+            </div>
+
+            <div className="px-2 rounded-full text-white bg-gradient-to-r from-red-500 to-red-300">
+              ৳1,303,640,768.36
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
